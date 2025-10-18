@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookNook - Online Bookstore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        nav {
+            background: #34495e;
+            padding: 0.5rem;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+        
+        nav ul li {
+            margin: 0 1rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+        
+        .search-bar {
+            display: flex;
+            margin: 1rem 0;
+        }
+        
+        .search-bar input {
+            flex: 1;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+        }
+        
+        .search-bar button {
+            padding: 0.5rem 1rem;
+            background: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .book-card {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            border-radius: 4px;
+        }
+        
+        .book-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background: #eee;
+        }
+        
+        .book-card h3 {
+            margin: 0.5rem 0;
+            font-size: 1rem;
+        }
+        
+        .book-card .author {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .book-card .price {
+            font-weight: bold;
+            margin-top: 0.5rem;
+        }
+        
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-dark text-white py-3">
+        <div class="container text-center">
+            <h1 class="display-4">BookNook</h1>
+            <p class="lead">Your favorite online bookstore</p>
+        </div>
+    </header>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Books</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Categories</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="input-group my-4">
+            <input type="text" class="form-control" placeholder="Search books...">
+            <button class="btn btn-primary" type="button">Search</button>
+        </div>
+        
+        <h2>Featured Books</h2>
+        <div class="book-grid">
+            <div class="book-card">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/933df02b-cfd1-4c81-a3c9-5d499cee87c4.png" alt="Book cover: Classic novel with ornate design">
+                <h3>The Great Novel</h3>
+                <p class="author">by Jane Doe</p>
+                <p class="price">$19.99</p>
+            </div>
+            
+            <div class="book-card">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/31970924-904d-4ead-a78d-17466821a0d5.png" alt="Book cover: Modern sci-fi with blue tones">
+                <h3>Space Odyssey</h3>
+                <p class="author">by Alex Smith</p>
+                <p class="price">$15.99</p>
+            </div>
+            
+            <div class="book-card">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/16f26402-eb8a-45cc-b9fd-85d8ff390e08.png" alt="Book cover: Mystery novel with dark cover">
+                <h3>The Hidden Truth</h3>
+                <p class="author">by John Writer</p>
+                <p class="price">$22.50</p>
+            </div>
+            
+            <div class="book-card">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5bac9b62-73f1-4aea-a6cf-5d55a1be5a7d.png" alt="Book cover: Colorful children's book">
+                <h3>Adventure Land</h3>
+                <p class="author">by Sara Johnson</p>
+                <p class="price">$12.99</p>
+            </div>
+        </div>
+        
+        <h2>New Arrivals</h2>
+        <div class="book-grid">
+            <div class="book-card">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6086319b-b378-4d61-aef0-14157b718f3e.png" alt="Book cover: Historical fiction novel">
+                <h3>The Last Kingdom</h3>
+                <p class="author">by Michael Brown</p>
+                <p class="price">$18.99</p>
+            </div>
+            
+            <div class="book-card">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/60489578-342c-49ee-ae4a-8100819b8cfe.png" alt="Book cover: Cookbook with food photography">
+                <h3>Kitchen Secrets</h3>
+                <p class="author">by Chef Roberts</p>
+                <p class="price">$24.99</p>
+            </div>
+            
+            <div class="book-card">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/906bf84e-6d75-47f9-be47-5c6b57e8cc10.png" alt="Book cover: Business book with minimalist design">
+                <h3>Startup Guide</h3>
+                <p class="author">by Chris Entrepreneur</p>
+                <p class="price">$16.99</p>
+            </div>
+            
+            <div class="book-card">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8e4dc4ac-33ae-40f3-ac89-a6d379e47405.png" alt="Book cover: Poetry collection with watercolor art">
+                <h3>Whispers of Time</h3>
+                <p class="author">by Emily Poet</p>
+                <p class="price">$14.99</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="bg-dark text-white py-3 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2023 BookNook. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
